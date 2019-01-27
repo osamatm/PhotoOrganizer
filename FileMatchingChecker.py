@@ -46,6 +46,9 @@ for folder in folderlist:
 
 endtime = time.time()
 executiontime = (endtime-starttime) * 1000
+sec, msec = divmod(executiontime, 1000)
+sec = round(sec)
+msec = round(msec)
 
 print ('\n')
 print ("********************************************")
@@ -56,9 +59,5 @@ print ("********************************************")
 print ("JPG List:", RemainedJpgList)
 print ("RAW List:", RemainedRawList)
 print ("********************************************")
-
-sec, msec = divmod(executiontime, 1000)
-sec = round(sec)
-msec = round(msec)
 
 print ("Execution Time :",sec,'sec',msec,'msec')
